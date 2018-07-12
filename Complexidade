@@ -1,0 +1,7 @@
+Cada iteração do algoritmo de Huffman reduz o tamanho do problema em 1 e, portanto, há exatamente n iterações. 
+
+O algoritmo classifica os pesos inicialmente e mantém duas listas. A primeira lista consiste em pesos que não foram combinados e a segunda lista consiste em árvores que foram formadas pela combinação de pesos. Esta ordenação inicial é obtida a um custo de O (nlogn). A obtenção do mínimo de duas árvores em cada etapa consiste em duas comparações (comparar os primeiros nós das duas listas e, em seguida, compare a maior com o item após do menor). 
+
+A ordenação da segunda lista pode ser mantida a baixo custo usando uma pesquisa binária para inserir novos elementos. Como na etapa i existem elementos i-1 na segunda lista, comparações O(log i) são necessárias para a inserção. Durante toda a duração do algoritmo, o custo de manter essa lista classificada é O(nlogn). Portanto, a complexidade geral do algoritmo de Huffman é O (nlogn).
+
+Em termos de complexidade de espaço, o algoritmo constrói uma árvore binária completa com exatamente n folhas. Portanto, a saída só pode ter no máximo 2n-1 nós. Assim, o algoritmo de Huffman requer espaço linear.
